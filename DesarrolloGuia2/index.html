@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Partes de Computador ComputEAN</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="index" href="index.php" >
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+            color: #333;
+        }
+
+        .header {
+            background-color: #2d2d2d;
+            color: #f3f3f3;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-bar a {
+            color: #f3f3f3;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+        }
+
+        .hero {
+            background-color: #e6e6e6;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .hero .banner h1 {
+            font-size: 2.5em;
+            color: #2d2d2d;
+        }
+
+        .productos {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px;
+            flex-wrap: wrap;
+        }
+
+        .producto {
+            background-color: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            width: 30%;
+            text-align: center;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+        }
+
+        .producto img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #e6e6e6;
+            margin-bottom: 10px;
+        }
+
+        .producto .precio {
+            color: #333;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .tachado {
+            text-decoration: line-through;
+            color: #888;
+        }
+
+        button {
+            background-color: #2d2d2d;
+            color: #f3f3f3;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #444;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">COMPUTEAN</div>
+        <nav class="nav-bar">
+            <a href="#">Inicio</a>
+            <a href="#">Categorías</a>
+            <a href="#">Ofertas</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="banner">
+            <h1>Encuentra las mejores partes para tu PC</h1>
+            <p>Descuentos especiales en procesadores, tarjetas gráficas y más.</p>
+        </div>
+    </section>
+
+    <section class="productos">
+        <div class="producto">
+            <img src="imagenes/procesador.jpg" alt="CPU Ryzen">
+            <h2>Procesador AMD Ryzen 5</h2>
+            <p>Antes: <span class="tachado">$299.000</span></p>
+            <p class="precio">$199.000</p>
+            <form action="index.php" method="POST">
+                <input type="hidden" name="producto_id" value="1">
+            <button>Comprar ahora</button>
+            </form>
+        </div>
+        <div class="producto">
+            <img src="imagenes/tarjeta.jpg" alt="Tarjeta Gráfica">
+            <h2>Tarjeta Gráfica NVIDIA GTX 1660</h2>
+            <p>Antes: <span class="tachado">$1.499.000</span></p>
+            <p class="precio">$1.299.000</p>
+            <form action="index.php" method="POST">
+                <input type="hidden" name="producto_id" value="2">
+            <button>Comprar ahora</button>
+            </form>
+        </div>
+        <div class="producto">
+            <img src="imagenes/ram.jpg" alt="Memoria RAM">
+            <h2>Memoria RAM 16GB DDR4</h2>
+            <p>Antes: <span class="tachado">$399.000</span></p>
+            <p class="precio">$349.000</p>
+            <form action="index.php" method="POST">
+                <input type="hidden" name="producto_id" value="3">
+            <button>Comprar ahora</button>
+            </form>
+        
+        </div>
+        <div class="producto">
+            <img src="imagenes/mouse.jpg" alt="Mouse inhalámbrico">
+            <h2>Mouse inhalámbrico</h2>
+            <p>Antes: <span class="tachado">$399.000</span></p>
+            <p class="precio">$299.000</p>
+            <form action="index.php" method="POST">
+                <input type="hidden" name="producto_id" value="4">
+            <button>Comprar ahora</button>
+            </form>
+        </div>
+        <div class="producto">
+            <img src="imagenes/case.jpg" alt="Case para computador">
+            <h2>Case para computador</h2>
+            <p>Antes: <span class="tachado">$1.299.000</span></p>
+            <p class="precio">$999.000</p>
+            <form action="index.php" method="POST">
+                <input type="hidden" name="producto_id" value="5">
+            <button>Comprar ahora</button>
+            </form>
+        </div>
+        <div class="producto">
+            <img src="imagenes/teclado.jpg" alt="Teclado mecánico">
+            <h2>Teclado mecánico</h2>
+            <p>Antes: <span class="tachado">$299.000</span></p>
+            <p class="precio">$99.000</p>
+            <form action="index.php" method="POST">
+                <input type="hidden" name="producto_id" value="6">
+            <button>Comprar ahora</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
